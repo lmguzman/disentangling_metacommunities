@@ -4,23 +4,7 @@ library(ggplot2)
 library(viridis)
 library(cowplot)
 
-sensitivy_t <- read.csv("results/sensitivity.csv") 
-
-original_names <- c("X", "r","time", "patch", "J", "B_s_0", "B_s_1", "B_s_2", "B_t_0", "B_t_1", "B_t_2",
-                           "alpha_bio_cv", "gamma_bio_cv", "max_abun", "min_abun","ratio_max_min","mean_prop_patches",
-                           "min_prop_patches","max_prop_patches", "BDtotal_patch","Repl_patch","RichDif_patch","Repl_BDtotal_patch",
-                           "RichDi_BDtotal_patch","BDtotal_time", "Repl_time","RichDif_time","Repl_BDtotal_time", "RichDi_BDtotal_time",
-                           "cor_comp_env", "cor_comp_space","cor_comp_time","cor_env_space","cor_env_time", "abundance_ratios_ratio_1_0",
-                           "abundance_ratios_ratio_2_0","occupancy_ratios_ratio_1_0", "occupancy_ratios_ratio_2_0","gamma_ratios_ratio_1_0", 
-                           "gamma_ratios_ratio_2_0","time_var_part_Space","time_var_part_Environment", "time_var_part_Time",
-                           "time_var_part_space_environ", "time_var_part_environ_time", "time_var_part_time_space","time_var_part_all",
-                           "time_var_part_residual")
-
-colnames(sensitivy_t) <- original_names
-
-sensitivy <- sensitivy_t %>%
-  dplyr::select(r, time, patch, alpha_bio_cv, RichDif_time, time_var_part_Environment, mean_prop_patches)
-
+sensitivy <- read.csv("results/sensitivy_small.csv")
 
 mid_d <- 0.00215
 mid_s <- 4.64159
@@ -100,6 +84,24 @@ ggsave(sensitivity_figure, file = 'figures/sensitivity.jpeg', width = 15, height
 
 
 ###### half life###
+
+### sensitivity is >300MB could not be included on github, please email if needed.
+
+sensitivy_t <- read.csv("results/sensitivity.csv") 
+
+original_names <- c("X", "r","time", "patch", "J", "B_s_0", "B_s_1", "B_s_2", "B_t_0", "B_t_1", "B_t_2",
+                    "alpha_bio_cv", "gamma_bio_cv", "max_abun", "min_abun","ratio_max_min","mean_prop_patches",
+                    "min_prop_patches","max_prop_patches", "BDtotal_patch","Repl_patch","RichDif_patch","Repl_BDtotal_patch",
+                    "RichDi_BDtotal_patch","BDtotal_time", "Repl_time","RichDif_time","Repl_BDtotal_time", "RichDi_BDtotal_time",
+                    "cor_comp_env", "cor_comp_space","cor_comp_time","cor_env_space","cor_env_time", "abundance_ratios_ratio_1_0",
+                    "abundance_ratios_ratio_2_0","occupancy_ratios_ratio_1_0", "occupancy_ratios_ratio_2_0","gamma_ratios_ratio_1_0", 
+                    "gamma_ratios_ratio_2_0","time_var_part_Space","time_var_part_Environment", "time_var_part_Time",
+                    "time_var_part_space_environ", "time_var_part_environ_time", "time_var_part_time_space","time_var_part_all",
+                    "time_var_part_residual")
+
+colnames(sensitivy_t) <- original_names
+
+
 
 #### Patch #####
 
