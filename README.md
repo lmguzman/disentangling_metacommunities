@@ -1,6 +1,6 @@
-# Disentangling metacommunity processes with observations in space and time
+# Accounting for temporal change in multiple biodiversity patterns improves the inference of metacommunity processes
 
-This repository contains code and data associated with “Disentangling metacommunity processes with observations in space and time”
+This repository contains code and data associated with the manuscript “Accounting for temporal change in multiple biodiversity patterns improves the inference of metacommunity processes” published in *Ecology*.
 
 Guzman, L. M., Thompson, P. L., Viana, D.S., Vanschoenwinkel, B., Horváth, Z., Ptacnik, R., Jeliazkov, A., Gascón, S., Lemmens, P., Anton-Pardo, M., Langenheder, S., Meester, L.D., Chase, J.M
 
